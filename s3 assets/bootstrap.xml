@@ -93,16 +93,16 @@
       </entry>
     </admin-role>
     <certificate>
-      <entry name="aws-jam-pan">
+      <entry name="aws-pan">
         <subject-hash>c0542737</subject-hash>
         <issuer-hash>c0542737</issuer-hash>
         <not-valid-before>Sep 19 22:02:47 2022 GMT</not-valid-before>
-        <issuer>aws-jam-pan</issuer>
+        <issuer>aws-pan</issuer>
         <not-valid-after>Sep 19 22:02:47 2023 GMT</not-valid-after>
-        <common-name>aws-jam-pan</common-name>
+        <common-name>aws-pan</common-name>
         <expiry-epoch>1695160967</expiry-epoch>
         <ca>yes</ca>
-        <subject>aws-jam-pan</subject>
+        <subject>aws-pan</subject>
         <public-key>-----BEGIN CERTIFICATE-----
 MIIC7zCCAdegAwIBAgIUJ80bMPtUHYNIJkYll2z6caWkgUUwDQYJKoZIhvcNAQEL
 BQAwFjEUMBIGA1UEAwwLYXdzLWphbS1wYW4wHhcNMjIwOTE5MjIwMjQ3WhcNMjMw
@@ -160,7 +160,7 @@ Iwyg
     </certificate>
     <ssl-decrypt>
       <forward-trust-certificate>
-        <rsa>aws-jam-pan</rsa>
+        <rsa>aws-pan</rsa>
       </forward-trust-certificate>
       <forward-untrust-certificate>
         <rsa>UNTRUST</rsa>
