@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: "2010-09-09"
 
 Description: >-
-  Root Stack for Jam Challenge with VM-Series and AWS Gateway Load Balancer (GWLB))
+  Root Stack for Challenge with VM-Series and AWS Gateway Load Balancer (GWLB))
 
 # ======================================================================================================================
 #   Parameters / Mappings
@@ -130,35 +130,34 @@ Parameters:
 
   SourceS3BucketName:
     Description: >-
-      Source bucket with bootstrap content intended to be used for Jam Session / AWS Events platform. Objects here will be be copied to new bucket in appropriate bootstrap structure
+      Source bucket with bootstrap content intended to be used for AWS Events platform. Objects here will be be copied to new bucket in appropriate bootstrap structure
     Type: String
     AllowedPattern: ^[0-9a-zA-Z]+([0-9a-zA-Z-]*[0-9a-zA-Z])*$|^$
     ConstraintDescription: Must be a valid S3 Bucket name or left blank for no Bootstrap.
-    Default: aws-jam-challenge-resources
+    Default: aws-challenge-resources
 
   SourceS3BucketPath:
     Type: String
-    Description: Name of the path in the S3 bucket where the bootstrap content is located. Should match the Jam Session ID
-    ConstraintDescription: 'Must match the Jam Session ID.'
+    Description: Name of the path in the S3 bucket where the bootstrap content is located. 
     Default: panw-vmseries-gwlb
 
   SecurityCftTemplateName:
     Type: String
     Description: Object name including file extension of CFN template in S3 bucket. Will be concatenated with SourceS3BucketName and SourceS3BucketPath
     ConstraintDescription: 'CFN template file name only. Dont include bucket name or path'
-    Default: aws-jam-panw-gwlb-cfn-security.yaml
+    Default: aws-panw-gwlb-cfn-security.yaml
 
   VmSeriesCftTemplateName:
     Type: String
     Description: Object name including file extension of CFN template in S3 bucket. Will be concatenated with SourceS3BucketName and SourceS3BucketPath
     ConstraintDescription: 'CFN template file name only. Dont include bucket name or path'
-    Default: aws-jam-panw-gwlb-cfn-vmseries.yaml
+    Default: aws-panw-gwlb-cfn-vmseries.yaml
 
   FrontendCftTemplateName:
     Type: String
     Description: Object name including file extension of CFN template in S3 bucket. Will be concatenated with SourceS3BucketName and SourceS3BucketPath
     ConstraintDescription: 'CFN template file name only. Dont include bucket name or path'
-    Default: aws-jam-panw-gwlb-cfn-combined.yaml
+    Default: aws-panw-gwlb-cfn-combined.yaml
 
   DataNamePrefix:
     Type: String
